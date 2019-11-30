@@ -15,6 +15,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
+
 # include .files when moving things around
 shopt -s dotglob
 
@@ -66,3 +67,6 @@ chmod +x boot.sh
 
 # clean the cache
 rm -rf $CACHE_DIR/*
+
+php/bin/pear install Mail
+php/bin/pear install Net_SMTP
